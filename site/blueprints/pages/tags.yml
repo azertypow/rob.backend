@@ -1,0 +1,40 @@
+blueprint: page
+
+title: Tags
+
+icon: tag
+
+options:
+  changeSlug: false
+  delete: false
+  changeTitle: false
+  sort: false
+  changeStatus: false
+  duplicate: false
+
+
+status:
+  draft:
+    label: Brouillon
+    text: L'article est toujours en mode brouillon. Elle ne peut être vue que par les éditeurs ayant accès au panneau.
+  unlisted:
+    label: En attente de publication
+    text: L'article n'est pas encore publiée. L'équipe doit toujours donner le feu vert final pour la publier.
+  listed:
+    label: Publié
+    text: L'article est répertoriée dans l'archive et en ligne.
+
+columns:
+  - width: 1/1
+    sections:
+      themes:
+        search: true
+        label: Tags
+        type: pages
+        template: tag
+        empty: la liste est vide pour l'instant…
+        image: false
+        layout: table
+        columns:
+          uuid:
+            label: identifiant

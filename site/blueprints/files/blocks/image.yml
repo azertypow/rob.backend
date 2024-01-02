@@ -1,0 +1,23 @@
+blueprint: file
+
+title: Image
+
+accept:
+  type: image
+  extension: jpg, png
+  mime: image/jpeg, image/png
+
+columns:
+  - width: 1/1
+    sections:
+      meta:
+        type: fields
+        fields:
+          title:
+            label: Titre
+            type: text
+            width: 1/2
+          credit:
+            label: Crédits
+            type: text
+            width: 1/2

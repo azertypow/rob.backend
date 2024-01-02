@@ -1,0 +1,31 @@
+blueprint: page
+
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+  image:
+    label: field.blocks.image.name
+    type: files
+    query: model.images
+    multiple: false
+    uploads:
+      template: blocks/image
+  textColor:
+    label: couleur du texte
+    type: radio
+    options:
+      - white
+      - black
+    default: 1
+    required: true
+
+  isFullWidth:
+    label: Largeur
+    help: Largeur de la photo dans la page
+    type: toggle
+    required: true
+    text:
+      - regular
+      - large
+

@@ -1,0 +1,49 @@
+blueprint: page
+
+title: About
+
+icon: ☎️
+
+options:
+  changeSlug: false
+  delete: false
+  changeTitle: true
+  sort: false
+  changeStatus: false
+  duplicate: false
+
+tabs:
+  content:
+    icon: text
+    label: À Propos
+    fields:
+      textAbout:
+        label: Texte
+        type: writer
+        marks:
+          - bold
+          - italic
+          - link
+        headings:
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+  contact:
+    icon: map
+    label: Contact
+    fields:
+      textContact:
+        label: Texte
+        type: writer
+        marks:
+          - bold
+          - italic
+          - link
+        headings:
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6

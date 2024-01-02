@@ -1,0 +1,90 @@
+blueprint: page
+
+title: Project
+
+num: date
+
+icon: 📖
+
+status:
+  draft:
+    label: Brouillon
+    text: L'article est toujours en mode brouillon. Elle ne peut être vue que par les éditeurs ayant accès au panneau.
+  unlisted:
+    label: En attente de publication
+    text: L'article n'est pas encore publiée. L'équipe doit toujours donner le feu vert final pour la publier.
+  listed:
+    label: Publié
+    text: L'article est répertoriée dans l'archive et en ligne.
+
+columns:
+  - width: 2/3
+    fields:
+      htmlContent:
+        label: Texte
+        type: writer
+        marks:
+          - bold
+          - italic
+          - link
+        headings:
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+
+
+
+      gallery:
+        type: blocks
+        label: Contenu
+        fieldsets:
+          - image
+          - video
+
+  - width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          imageCover:
+            type: files
+            required: true
+            label: Image de couverture
+            extends: fields/imageOnlyOne
+          date:
+            required: false
+            label: Date
+            help: Si il n'y a pas de date, le projet sera affiché "Ongoing"
+            type: date
+            default: false
+            display: YYYY
+          author:
+            required: true
+            label: Responsable
+            type: multiselect
+            options:
+              type: query
+              query: site.children.template("community").children.template("researcher")
+          partners:
+            label: Partenaires
+            type: list
+            marks:
+              - bold
+              - italic
+          team:
+            label: Équipe
+            type: list
+            marks:
+              - link
+              - italic
+          themes:
+            required: true
+            label: Thèmes
+            type: multiselect
+            min: 1
+            options:
+              type: query
+              query: site.find('themes-et-axe-de-recherche').childrenAndDrafts.template('list-theme')
+              text: "{{ item.title }}"

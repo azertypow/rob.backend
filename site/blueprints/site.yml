@@ -1,5 +1,43 @@
-title: Site
+blueprint: site
 
-sections:
-  pages:
-    type: pages
+options:
+  changeTitle: true
+  preview: https://mycustomdomain.com
+
+columns:
+  - width: 1/4
+    sections:
+      projects:
+        label: " "
+        type: pages
+        status: listed
+        image:
+          cover: false
+          back: white
+        templates: projects
+        layout: cards
+        size: medium
+  - width: 1/4
+    sections:
+      about:
+        label: " "
+        type: pages
+        status: listed
+        image:
+          cover: false
+          back: white
+        templates: about
+        layout: cards
+        size: medium
+  - width: 1/4
+    sections:
+      themeList:
+        label: " "
+        type: pages
+        status: listed
+        image:
+          cover: false
+          back: white
+        templates: tags
+        layout: cards
+        size: medium

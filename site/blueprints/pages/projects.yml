@@ -1,0 +1,37 @@
+blueprint: page
+
+title: Projects
+
+icon: 📖
+
+options:
+  changeSlug: false
+  delete: false
+  changeTitle: false
+  sort: false
+  changeStatus: false
+  duplicate: false
+
+columns:
+  - width: 1/3
+    sections:
+      drafts:
+        extends: sections/projects
+        type: pages
+        label: Brouillon
+        status: draft
+
+      unlisted:
+        extends: sections/projects
+        type: pages
+        label: En attente de publication
+        status: unlisted
+
+  - width: 2/3
+    sections:
+      listed:
+        extends: sections/projects
+        type: pages
+        label: Publié
+        status: listed
+        search: true
