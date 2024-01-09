@@ -5,10 +5,21 @@ icon: video
 preview: video
 fields:
   url:
-    label: field.blocks.video.url.label
+    label: URL video Vimeo
     type: url
-    placeholder: field.blocks.video.url.placeholder
-  caption:
-    label: field.blocks.video.caption
+    placeholder: https://vimeo.com/787533687
+  credit:
+    label: Crédits
     type: writer
     inline: true
+  title:
+    label: Titre
+    type: writer
+    inline: true
+  isFullWidth:
+    label: Largeur
+    help: Largeur de la photo dans la page
+    type: toggle
+    text:
+      - regular
+      - large

@@ -1,0 +1,5 @@
+type: files
+multiple: true
+query: page.images.template('image')
+uploads:
+  template: image

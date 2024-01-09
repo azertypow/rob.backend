@@ -11,20 +11,10 @@ fields:
     multiple: false
     uploads:
       template: blocks/image
-  textColor:
-    label: couleur du texte
-    type: radio
-    options:
-      - white
-      - black
-    default: 1
-    required: true
-
   isFullWidth:
     label: Largeur
     help: Largeur de la photo dans la page
     type: toggle
-    required: true
     text:
       - regular
       - large

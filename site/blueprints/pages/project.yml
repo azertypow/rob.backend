@@ -18,10 +18,18 @@ status:
     text: L'article est répertoriée dans l'archive et en ligne.
 
 columns:
-  - width: 2/3
+  - width: 1/1
+    fields:
+      arrayOfImagesCarousel:
+        type: files
+        required: true
+        label: Images Home
+        help: Image pour le caroussel de la home
+        extends: fields/imageMulti
+  - width: 1/2
     fields:
       htmlContent:
-        label: Texte
+        label: Texte du projet
         type: writer
         marks:
           - bold
@@ -33,17 +41,35 @@ columns:
           - 4
           - 5
           - 6
-
-
-
-      gallery:
+      listOfDetails:
+        label: Détails
+        type: structure
+        fields:
+          name:
+            label: Nom
+            type: writer
+            help: Colonne de gauche
+            marks:
+              - bold
+              - italic
+              - link
+            nodes: false
+          value:
+            label: Valeur
+            type: writer
+            help: Colonne de droite
+            marks:
+              - bold
+              - italic
+              - link
+            nodes: false
+      galleryProject:
         type: blocks
-        label: Contenu
+        label: Liste des vidéos et images dans la page
         fieldsets:
           - image
           - video
-
-  - width: 1/3
+  - width: 1/2
     sections:
       meta:
         type: fields
@@ -51,7 +77,18 @@ columns:
           imageCover:
             type: files
             required: true
-            label: Image de couverture
+            label: Image couverture projet
+            help: Image de couverture pour la page du projet
+            extends: fields/imageOnlyOne
+            layout: cards
+            image:
+              cover: false
+              back: white
+          imageCoverForIndex:
+            type: files
+            required: true
+            label: Image couverture index
+            help: Image de couverture pour l'apperçu des images au survole de la souris dans l'index
             extends: fields/imageOnlyOne
           date:
             required: false
@@ -60,31 +97,22 @@ columns:
             type: date
             default: false
             display: YYYY
-          author:
+          tags:
             required: true
-            label: Responsable
-            type: multiselect
-            options:
-              type: query
-              query: site.children.template("community").children.template("researcher")
-          partners:
-            label: Partenaires
-            type: list
-            marks:
-              - bold
-              - italic
-          team:
-            label: Équipe
-            type: list
-            marks:
-              - link
-              - italic
-          themes:
-            required: true
-            label: Thèmes
+            label: tags
             type: multiselect
             min: 1
             options:
               type: query
-              query: site.find('themes-et-axe-de-recherche').childrenAndDrafts.template('list-theme')
+              query: site.find('liste-des-tags').childrenAndDrafts.template('tag')
               text: "{{ item.title }}"
+              value: "{{ item.uuid }}"
+          selfInitiated:
+            label: Self Initiated
+            type: toggle
+            default: false
+            text:
+              - "non"
+              - "Self Initiated"
+
+

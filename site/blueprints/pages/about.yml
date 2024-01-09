@@ -47,3 +47,12 @@ tabs:
           - 4
           - 5
           - 6
+      map:
+        type: files
+        required: true
+        label: Image de la map
+        extends: fields/imageOnlyOne
+        layout: cards
+        image:
+          cover: false
+          back: white
