@@ -96,7 +96,7 @@ columns:
             help: Si il n'y a pas de date, le projet sera affiché "Ongoing"
             type: date
             default: false
-            display: YYYY
+            display: YYYY-MM
           tags:
             required: true
             label: tags
