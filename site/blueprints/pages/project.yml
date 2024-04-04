@@ -114,5 +114,9 @@ columns:
             text:
               - "non"
               - "Self Initiated"
-
+      allImagesUpload:
+        label: Toutes les images transférées
+        layout: table
+        type: files
+        sortable: false
 
