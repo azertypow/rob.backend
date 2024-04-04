@@ -34,7 +34,7 @@
   "scripts": {
     "start": [
       "Composer\\Config::disableProcessTimeout",
-      "@php -S localhost:8000 kirby/router.php"
+      "@php -c php.ini -S localhost:8000 kirby/router.php"
     ]
   }
 }
