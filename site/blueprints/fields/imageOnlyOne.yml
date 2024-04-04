@@ -1,5 +1,5 @@
 type: files
 multiple: false
-query: page.images.template('image')
+query: model.images
 uploads:
   template: image
