@@ -42,17 +42,6 @@ return [
             }
         ],
         [
-            'pattern' => '/webapp/api/v1/community',
-            'action'  => function () {
-                header("Access-Control-Allow-Origin: *");
-
-                return new Page([
-                    'slug'      => 'community',
-                    'template'  => 'get.community',
-                ]);
-            }
-        ],
-        [
             'pattern' => '/webapp/api/v1/tags',
             'action'  => function () {
                 header("Access-Control-Allow-Origin: *");
