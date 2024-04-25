@@ -15,7 +15,31 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
     return [
 
       'imageCover'        =>   array_values(getImageArrayDataInPage($project->imageCover())),
-//      galleryProject      =>   (IApiImageOfProject | IApiVideo)[]
+      'galleryProject'    => array_values(
+        $project
+          ->galleryProject()
+          ->toBlocks()
+          ->map(
+            function ($item) {
+
+              if ($item->type() == 'image') {
+
+                $arrayImages = getImageArrayDataInPage($item->content()->image());
+
+                return array_merge(
+                  $item->toArray(),
+                  [
+                    'images' => $arrayImages ? array_values($arrayImages) : [],
+                  ]
+                );
+              }
+
+              return $item->toArray();
+
+            }
+          )
+        ->data()
+      ),
       'htmlContent'       =>  $project->htmlContent()->value(),
       'listOfDetails'     =>  $project->listOfDetails()->toStructure()->map(function ($value) {
         return [
