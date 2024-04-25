@@ -31,7 +31,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
       'slug'                  => $project->slug(),
       'title'                 => $project->title()->value(),
       'arrayOfImagesCarousel' => array_values(getImageArrayDataInPage($project->arrayOfImagesCarousel())),
-      'imageCoverForIndex'    => array_values( getJsonEncodeImageData($project->imageCoverForIndex()->toFile()) ),
+      'imageCoverForIndex'    => getJsonEncodeImageData($project->imageCoverForIndex()->toFile()),
       'selfInitiated'         => $project->selfInitiated()->value() == 'true',
       'date'                  => $project->date()->value(),
       'tags'                  => array_map(function (string $themeSlug) use ($kirby) {
