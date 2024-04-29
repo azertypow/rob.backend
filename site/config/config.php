@@ -49,6 +49,22 @@ return [
                 return getTags(kirby(), site());
             }
         ],
+        [
+            'pattern' => '/webapp/api/v1/about',
+            'action'  => function () {
+                header("Access-Control-Allow-Origin: *");
+                include_once 'site/templates/get.about.php';
+                return getAbout(kirby(), site());
+            }
+        ],
+        [
+            'pattern' => '/webapp/api/v1/contact',
+            'action'  => function () {
+                header("Access-Control-Allow-Origin: *");
+                include_once 'site/templates/get.contact.php';
+                return getContact(kirby(), site());
+            }
+        ]
     ],
     'panel' => [
         'css' => '_custom-panel/main.css',
