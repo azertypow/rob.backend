@@ -11,12 +11,15 @@ echo json_encode([
     ->children()
     ->filterBy('status', 'listed')
     ->map(function (\Kirby\Cms\Page $project) use ($kirby, $site) {
+
+      $imageArrayDataInPage = getImageArrayDataInPage($project->arrayOfImagesCarousel());
+
       return [
         'status'                => $project->status(),
         'uid'                   => $project->uid(),
         'slug'                  => $project->slug(),
         'title'                 => $project->title()->value(),
-        'arrayOfImagesCarousel' => array_values(getImageArrayDataInPage($project->arrayOfImagesCarousel())),
+        'arrayOfImagesCarousel' => $imageArrayDataInPage ? array_values($imageArrayDataInPage) : null,
         'imageCoverForIndex'    => getJsonEncodeImageData($project->imageCoverForIndex()->toFile()),
         'selfInitiated'         => $project->selfInitiated()->value() == 'true',
         'date'                  => $project->date()->value(),

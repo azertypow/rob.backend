@@ -12,6 +12,9 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
       'error' => 'la page n\'existe pas',
     ];
   } else {
+
+    $imageArrayDataInPage = getImageArrayDataInPage($project->arrayOfImagesCarousel());
+
     return [
 
       'imageCover'        =>   array_values(getImageArrayDataInPage($project->imageCover())),
@@ -54,7 +57,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
       'uid'                   => $project->uid(),
       'slug'                  => $project->slug(),
       'title'                 => $project->title()->value(),
-      'arrayOfImagesCarousel' => array_values(getImageArrayDataInPage($project->arrayOfImagesCarousel())),
+      'arrayOfImagesCarousel' => $imageArrayDataInPage ? array_values($imageArrayDataInPage) : null,
       'imageCoverForIndex'    => getJsonEncodeImageData($project->imageCoverForIndex()->toFile()),
       'selfInitiated'         => $project->selfInitiated()->value() == 'true',
       'date'                  => $project->date()->value(),
