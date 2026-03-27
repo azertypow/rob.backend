@@ -1,0 +1,5 @@
+type: files
+multiple: true
+query: model.files.filterBy('type', 'in', ['image', 'video'])
+uploads:
+  template: imageOrVideo

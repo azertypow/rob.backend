@@ -25,7 +25,8 @@ columns:
         required: false
         label: Images Home
         help: Image pour le caroussel de la home
-        extends: fields/imageMulti
+        extends: fields/imageOrVideoMulti
+
   - width: 1/2
     fields:
       htmlContent:
