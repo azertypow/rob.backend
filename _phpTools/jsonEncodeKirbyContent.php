@@ -18,6 +18,7 @@ function getImageArrayDataInPage(Field $imagesField): ?array
 function getJsonEncodeImageData(Cms\File $file): array
 {
     return [
+        'focus'         => $file->focus()->value(),
         'caption'       => $file->caption()->value(),
         'alt'           => $file->alt()->value(),
         'link'          => $file->link()->value(),
