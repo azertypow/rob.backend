@@ -50,7 +50,7 @@ tabs:
       mapImage:
         type: files
         required: true
-        label: Image de la map
+        label: Image footer
         extends: fields/imageOnlyOne
         layout: cards
         image:
