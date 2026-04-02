@@ -80,10 +80,22 @@ columns:
         type: fields
         fields:
           imageCover:
+            width: 1/2
             type: files
             required: true
             label: Image couverture projet
             help: Image de couverture pour la page du projet
+            extends: fields/imageOnlyOne
+            layout: cards
+            image:
+              cover: false
+              back: white
+          imageCover_mobile:
+            width: 1/2
+            type: files
+            required: false
+            label: Image couverture projet version mobile
+            help: Image de couverture pour la page du projet en version mobile
             extends: fields/imageOnlyOne
             layout: cards
             image:
