@@ -95,6 +95,12 @@ columns:
             label: Image couverture index
             help: Image de couverture pour l'apperçu des images au survole de la souris dans l'index
             extends: fields/imageOnlyOne
+          date_start:
+            required: false
+            label: Date
+            type: date
+            default: false
+            display: YYYY-MM
           date:
             required: false
             label: Date
