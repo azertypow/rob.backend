@@ -30,6 +30,40 @@ tabs:
           - 4
           - 5
           - 6
+      listOfDetails_about:
+        label: Détails
+        type: structure
+        fields:
+          name:
+            label: Nom
+            type: writer
+            help: Colonne de gauche
+            marks:
+              - bold
+              - italic
+              - link
+            nodes: false
+          value:
+            label: Valeur
+            type: writer
+            help: Colonne de droite
+            marks:
+              - bold
+              - italic
+              - link
+            nodes: false
+
+      mapImage_about:
+        type: files
+        required: true
+        label: Image pied de page
+        extends: fields/imageOnlyOne
+        layout: cards
+        image:
+          cover: false
+          back: white
+
+
   contact:
     icon: map
     label: Contact
@@ -47,6 +81,30 @@ tabs:
           - 4
           - 5
           - 6
+
+      listOfDetails_contact:
+        label: Détails
+        type: structure
+        fields:
+          name:
+            label: Nom
+            type: writer
+            help: Colonne de gauche
+            marks:
+              - bold
+              - italic
+              - link
+            nodes: false
+          value:
+            label: Valeur
+            type: writer
+            help: Colonne de droite
+            marks:
+              - bold
+              - italic
+              - link
+            nodes: false
+
       mapImage:
         type: files
         required: true
