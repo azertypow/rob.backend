@@ -23,6 +23,7 @@ echo json_encode([
         'imageCoverForIndex'    => getJsonEncodeImageData($project->imageCoverForIndex()->toFile()),
         'selfInitiated'         => $project->selfInitiated()->value() == 'true',
         'date'                  => $project->date()->value(),
+        'date_start'            => $project->date_start()->value(),
         'tags'                  => array_map(function (string $themeSlug) use ($kirby) {
           $themePage = $kirby->page(trim($themeSlug));
           if ($themePage == null) return null;
