@@ -4,7 +4,11 @@ title: Project
 
 num: date
 
-icon: 📖
+icon: empty
+
+image:
+  back: blue
+  query: page.imageCover.toFile
 
 status:
   draft:
