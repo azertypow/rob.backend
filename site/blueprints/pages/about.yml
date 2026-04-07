@@ -55,7 +55,7 @@ tabs:
 
       mapImage_about:
         type: files
-        required: true
+        required: false
         label: Image pied de page
         extends: fields/imageOnlyOne
         layout: cards
@@ -107,7 +107,7 @@ tabs:
 
       mapImage:
         type: files
-        required: true
+        required: false
         label: Image footer
         extends: fields/imageOnlyOne
         layout: cards
