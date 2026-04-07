@@ -1,5 +1,8 @@
 <?php
 
+include_once '_phpTools/jsonEncodeKirbyContent.php';
+
+
 function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
 {
   $contactPage = $site->find('a-propos');
