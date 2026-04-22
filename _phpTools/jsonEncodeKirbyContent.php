@@ -22,7 +22,8 @@ function getJsonEncodeImageData(Cms\File $file): array
         'caption'       => $file->caption()->value(),
         'alt'           => $file->alt()->value(),
         'link'          => $file->link()->value(),
-        'photoCredit'   => $file->photoCredit()->value(),
+        'credit'        => $file->credit()->value(),
+        'title'         => $file->title()->value(),
         'url'           => $file->url(),
         'mediaUrl'      => $file->mediaUrl(),
         'width'         => $file->width(),
@@ -42,8 +43,8 @@ function getBlogContentImageType(CMS\Block | Kirby\Cms\File $blockItem): array {
         'caption'       => $blockItem->caption()->value(),
         'alt'           => $blockItem->alt()->value(),
         'link'          => $blockItem->link()->value(),
-        'photoCredit'  => $blockItem->photoCredit()->value(),
-
+        'credit'        => $blockItem->credit()->value(),
+        'title'         => $blockItem->title()->value(),
         'type'          => $blockItem->type(),
         'isHidden'      => $blockItem->isHidden(),
         'image'         => ($blockItem->image()->toFile() instanceof Kirby\Cms\File)
