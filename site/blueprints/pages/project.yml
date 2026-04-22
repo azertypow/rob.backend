@@ -31,6 +31,13 @@ columns:
         help: Image pour le caroussel de la home
         extends: fields/imageOrVideoMulti
 
+      arrayOfImagesCarousel_mobil:
+        type: files
+        required: false
+        label: Images Home version Mobile
+        help: Image pour le caroussel de la home
+        extends: fields/imageOrVideoMulti
+
   - width: 1/2
     fields:
       htmlContent:
@@ -85,17 +92,6 @@ columns:
             required: true
             label: Image couverture projet
             help: Image de couverture pour la page du projet
-            extends: fields/imageOnlyOne
-            layout: cards
-            image:
-              cover: false
-              back: white
-          imageCover_mobile:
-            width: 1/2
-            type: files
-            required: false
-            label: Image couverture projet version mobile
-            help: Image de couverture pour la page du projet en version mobile
             extends: fields/imageOnlyOne
             layout: cards
             image:
