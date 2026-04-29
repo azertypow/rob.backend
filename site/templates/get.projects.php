@@ -12,14 +12,16 @@ echo json_encode([
     ->filterBy('status', 'listed')
     ->map(function (\Kirby\Cms\Page $project) use ($kirby, $site) {
 
-      $imageArrayDataInPage = getImageArrayDataInPage($project->arrayOfImagesCarousel());
+      $imageArrayDataInPage       = getImageArrayDataInPage($project->arrayOfImagesCarousel());
+      $imageArrayDataInPage_mobil = getImageArrayDataInPage($project->arrayOfImagesCarousel_mobil());
 
       return [
         'status'                => $project->status(),
         'uid'                   => $project->uid(),
         'slug'                  => $project->slug(),
         'title'                 => $project->title()->value(),
-        'arrayOfImagesCarousel' => $imageArrayDataInPage ? array_values($imageArrayDataInPage) : null,
+        'arrayOfImagesCarousel'       => $imageArrayDataInPage        ? array_values($imageArrayDataInPage) : null,
+        'arrayOfImagesCarousel_mobil' => $imageArrayDataInPage_mobil  ? array_values($imageArrayDataInPage_mobil) : null,
         'imageCoverForIndex'    => getJsonEncodeImageData($project->imageCoverForIndex()->toFile()),
         'selfInitiated'         => $project->selfInitiated()->value() == 'true',
         'date'                  => $project->date()->value(),
