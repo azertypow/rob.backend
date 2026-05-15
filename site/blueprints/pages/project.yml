@@ -53,28 +53,34 @@ columns:
           - 4
           - 5
           - 6
-      listOfDetails:
-        label: Détails
-        type: structure
-        fields:
-          name:
-            label: Nom
-            type: writer
-            help: Colonne de gauche
-            marks:
-              - bold
-              - italic
-              - link
-            nodes: false
-          value:
-            label: Valeur
-            type: writer
-            help: Colonne de droite
-            marks:
-              - bold
-              - italic
-              - link
-            nodes: false
+      page_content:
+        type: blocks
+        label: contenu
+        fieldsets:
+          - text
+          listOfDetails:
+            label: Détails
+            type: structure
+            fields:
+              name:
+                label: Nom
+                type: writer
+                help: Colonne de gauche
+                marks:
+                  - bold
+                  - italic
+                  - link
+                nodes: false
+              value:
+                label: Valeur
+                type: writer
+                help: Colonne de droite
+                marks:
+                  - bold
+                  - italic
+                  - link
+                nodes: false
+
       galleryProject:
         type: blocks
         label: Liste des vidéos et images dans la page
