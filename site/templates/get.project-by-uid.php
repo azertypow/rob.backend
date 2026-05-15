@@ -37,6 +37,12 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
                 );
               }
 
+              if($item->type() == 'video') {
+                return array_merge([
+                  'coucou' => 'coucou'
+                ]);
+              }
+
               return $item->toArray();
 
             }

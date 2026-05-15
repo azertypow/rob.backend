@@ -4,6 +4,13 @@ name: field.blocks.video.name
 icon: video
 preview: video
 fields:
+  video_file:
+    label: Fichier Vidéo
+    type: files
+    multiple: false
+    query: model.files.filterBy('type', 'in', ['video'])
+    uploads:
+      template: video
   url:
     label: URL video Vimeo
     type: url
