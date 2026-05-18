@@ -28,6 +28,7 @@ function getJsonEncodeImageData(Cms\File $file): array
         'mediaUrl'      => $file->mediaUrl(),
         'width'         => $file->width(),
         'height'        => $file->height(),
+        'textColor'     => $file->textColor(),
         'resize'        => [
             'tiny'          => $file->resize(50, null, 10)->url(),
             'small'         => $file->resize(500)->url(),
