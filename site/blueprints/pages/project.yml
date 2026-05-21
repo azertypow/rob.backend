@@ -80,7 +80,7 @@ columns:
         label: Liste des vidéos et images dans la page
         fieldsets:
           - image
-          - video
+          - 1217-video
   - width: 1/2
     sections:
       meta:

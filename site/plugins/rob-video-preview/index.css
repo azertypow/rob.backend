@@ -1,0 +1,12 @@
+.b1217-video__video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.b1217-video__iframe--vimeo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
