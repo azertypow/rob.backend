@@ -37,7 +37,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
                 );
               }
 
-              if($item->type() == 'video') {
+              if($item->type() == '1217-video') {
 
                 $arrayImages = getImageArrayDataInPage($item->content()->video_file());
 
