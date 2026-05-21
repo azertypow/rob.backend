@@ -30,29 +30,12 @@ tabs:
           - 4
           - 5
           - 6
-      listOfDetails_about:
-        label: Détails
-        type: structure
-        fields:
-          name:
-            label: Nom
-            type: writer
-            help: Colonne de gauche
-            marks:
-              - bold
-              - italic
-              - link
-            nodes: false
-          value:
-            label: Valeur
-            type: writer
-            help: Colonne de droite
-            marks:
-              - bold
-              - italic
-              - link
-            nodes: false
-
+      page_content_about:
+        type: blocks
+        label: contenu
+        fieldsets:
+          - text
+          - array-list
       mapImage_about:
         type: files
         required: false
@@ -81,29 +64,12 @@ tabs:
           - 4
           - 5
           - 6
-
-      listOfDetails_contact:
-        label: Détails
-        type: structure
-        fields:
-          name:
-            label: Nom
-            type: writer
-            help: Colonne de gauche
-            marks:
-              - bold
-              - italic
-              - link
-            nodes: false
-          value:
-            label: Valeur
-            type: writer
-            help: Colonne de droite
-            marks:
-              - bold
-              - italic
-              - link
-            nodes: false
+      page_content_contact:
+        type: blocks
+        label: contenu
+        fieldsets:
+          - text
+          - array-list
 
       mapImage:
         type: files
