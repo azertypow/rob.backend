@@ -75,6 +75,13 @@ columns:
               - italic
               - link
             nodes: false
+
+      page_content:
+        type: blocks
+        label: contenu
+        fieldsets:
+          - text
+          - array-list
       galleryProject:
         type: blocks
         label: Liste des vidéos et images dans la page
@@ -134,8 +141,9 @@ columns:
               - "non"
               - "Self Initiated"
       allImagesUpload:
-        label: Toutes les images transférées
+        label: Toutes les fichiers transférées
         layout: table
         type: files
         sortable: false
+        uploads: image
 
