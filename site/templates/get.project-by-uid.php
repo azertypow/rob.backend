@@ -65,6 +65,7 @@ function getProjectByUID(string $pageUid, Kirby\Cms\App $kirby, Kirby\Cms\Site $
 
 
 //      same as get.$project
+      'page_content'          => $project->page_content()->toBlocks()->toArray(),
       'status'                => $project->status(),
       'uid'                   => $project->uid(),
       'slug'                  => $project->slug(),

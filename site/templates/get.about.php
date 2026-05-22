@@ -15,7 +15,9 @@ function getAbout(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
   return [
     'error' => null,
     'data' => [
-      'listOfDetails_about' => $contactPage->listOfDetails_about()->toStructure()->map(function ($value) {
+      'page_content_about'            => $contactPage->page_content_about()->toBlocks()->toArray(),
+      'page_content_contact'          => $contactPage->page_content_contact()->toBlocks()->toArray(),
+      'listOfDetails_about'           => $contactPage->listOfDetails_about()->toStructure()->map(function ($value) {
         return [
           'name' => $value->name()->value(),
           'value' => $value->value()->value(),
