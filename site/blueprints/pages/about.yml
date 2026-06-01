@@ -27,9 +27,6 @@ tabs:
         headings:
           - 2
           - 3
-          - 4
-          - 5
-          - 6
       page_content_about:
         type: blocks
         label: contenu
@@ -61,9 +58,6 @@ tabs:
         headings:
           - 2
           - 3
-          - 4
-          - 5
-          - 6
       page_content_contact:
         type: blocks
         label: contenu

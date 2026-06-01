@@ -12,6 +12,7 @@ fields:
       - orderedList
     headings:
       - 2
+      - 3
     marks:
       - bold
       - italic
