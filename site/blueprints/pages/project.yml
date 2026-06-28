@@ -82,7 +82,7 @@ columns:
             type: files
             required: true
             label: Image couverture index
-            help: Image de couverture pour l'apperçu des images au survole de la souris dans l'index
+            help: Image de couverture pour l'aperçu des images au survole de la souris dans l'index
             extends: fields/imageOnlyOne
           date_start:
             required: false
