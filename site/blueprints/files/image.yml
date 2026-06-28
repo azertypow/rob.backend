@@ -38,3 +38,9 @@ columns:
               - afficher
             default: 0
             width: 1/3
+          customCarrouselTiming:
+            label: Temps personnalisé pour le carrousel de la home (en secondes)
+            type: number
+            placeholder: 5
+            help: N'est valable que si l'image est utilisée dans le carrousel de la home
+            width: 1/3
