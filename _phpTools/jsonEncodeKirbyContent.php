@@ -29,6 +29,8 @@ function getJsonEncodeImageData(Cms\File $file): array
         'width'         => $file->width(),
         'height'        => $file->height(),
         'textColor'     => $file->textColor()->value(),
+        'showTitle'             => $file->showTitle()->value(),
+        'customCarrouselTiming' => $file->customCarrouselTiming()->value(),
         'resize'        => [
             'tiny'          => $file->resize(50, null, 10)->url(),
             'small'         => $file->resize(500)->url(),
