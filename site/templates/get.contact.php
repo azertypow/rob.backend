@@ -1,6 +1,7 @@
 <?php
 
 include_once '_phpTools/jsonEncodeKirbyContent.php';
+include_once '_phpTools/_email-obfuscation-kirby.php';
 
 function getContact(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
 {
@@ -20,7 +21,7 @@ function getContact(Kirby\Cms\App $kirby, Kirby\Cms\Site $site): array
           'value' => $value->value()->value(),
         ];
       })->data(),
-      'textcontact' => $contactPage->textcontact()->value(),
+      'textcontact' => obfuscateEmails($contactPage->textcontact()->value()),
       'mapImage' => $contactPage->mapImage()->toFile() ? getJsonEncodeImageData($contactPage->mapImage()->toFile()) : null,
     ],
   ];
