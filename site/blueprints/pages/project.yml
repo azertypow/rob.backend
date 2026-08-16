@@ -119,10 +119,14 @@ columns:
         layout: table
         type: files
         sortable: false
-        template: image
+        query: page.files.filterBy('template', 'image')
+        uploads:
+          template: image
       allVideosUpload:
         label: Toutes les vidéos transférées
         layout: table
         type: files
         sortable: false
-        template: video
+        query: page.files.filterBy('template', 'video')
+        uploads:
+          template: video
